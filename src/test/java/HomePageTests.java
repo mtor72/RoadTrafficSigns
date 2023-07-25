@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+//import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import pages.HomePage;
 
 public class HomePageTests extends TestBase {
@@ -7,7 +8,7 @@ public class HomePageTests extends TestBase {
      *  Click on Custom Traffic Signs Image Box
      *  Check Custom Traffic Signs page appears
      *  Check Custom Traffic Signs page Heading as expected */
-    @Test
+    @Test(priority = 2)
     public void homePage_ClickOnCustomTrafficSignsImageBox_CustomTrafficSignsPageAppears() {
         // arrange
         var homePage = new HomePage(driver, wait);
@@ -26,7 +27,7 @@ public class HomePageTests extends TestBase {
      *  Click on Custom Traffic Signs Text Link
      *  Check Custom Traffic Signs page appears
      *  Check Custom Traffic Signs page Heading as expected */
-    @Test
+    @Test(priority = 1)
     public void homePage_ClickOnCustomTrafficSignsTextLink_CustomTrafficSignsPageAppears() {
         // arrange
         var homePage = new HomePage(driver, wait);
